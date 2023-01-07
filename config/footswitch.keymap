@@ -5,12 +5,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    behaviors {
-
-    };
 
     chosen {
-        // zmk,battery = &vbatt;
         zmk,kscan = &kscan0;
     };
 
@@ -32,21 +28,7 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = <
-                &kp LEFT_ARROW &kp RIGHT_ARROW &bt BT_CLR
-            >;
-        };
-
-        alternative_layer {
-            bindings = <
-                &kp UP_ARROW &kp DOWN_ARROW &bt BT_CLR
-            >;
-        };
-
-        control_layer {
-            bindings = <
-                &bt BT_PRV &bt BT_NXT &bt BT_CLR 
-            >;
+            bindings = <&kp LEFT_ARROW &kp RIGHT_ARROW &bt BT_CLR>;
         };
     };
 }
