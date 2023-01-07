@@ -11,6 +11,22 @@
 
     chosen {
         // zmk,battery = &vbatt;
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "KSCAN0";
+        rows = <3>;
+        columns = <1>;
+
+        &kscan {
+            input-gpios = <
+                &xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+                &xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+                &xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            >;
+        };
     };
 
     keymap {
