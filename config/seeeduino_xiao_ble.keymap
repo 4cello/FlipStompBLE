@@ -18,13 +18,11 @@
         rows = <3>;
         columns = <1>;
 
-        &kscan {
-            input-gpios = <
-                &xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-                &xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-                &xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
-            >;
-        };
+        input-gpios = <
+            &xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+            &xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+            &xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+        >;
     };
 
     default_transform: matrix_transform {
