@@ -13,6 +13,17 @@
 
 / {
 
+//    behaviors {
+//        ht_hp: ht_hp_mods {
+//            compatible = "zmk,behavior-hold-tap";
+//            label = "HT_HP";
+//            #binding-cells = <2>;
+//            tapping-term-ms = <250>;
+//            flavor = "hold-preferred";
+//            bindings = <&kp>, <&kp>;
+//        };
+//    };
+
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
@@ -47,7 +58,7 @@
         default_layer {
             bindings = <
                 &kp LEFT_ARROW
-                &ht_hp LEFT_ARROW RIGHT_ARROW
+                &mt LEFT_ARROW RIGHT_ARROW
                 &bt BT_CLR
             >;
         };
