@@ -74,7 +74,7 @@
         };
         up_down_layer {
             bindings = <
-                &mt LEFT_ARROW RIGHT_ARROW
+                &mt UP_ARROW DOWN_ARROW
                 &none
                 &td_mt
             >;
