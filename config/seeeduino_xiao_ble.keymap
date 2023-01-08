@@ -60,11 +60,13 @@
     };
 
     // https://zmk.dev/docs/features/backlight
+    // LED Pins: R=11, G=13, B=12
+    // (https://github.com/mike1808/PIO_SEEED_Adafruit_nRF52_Arduino/blob/master/variants/Seeed_XIAO_nRF52840/variant.h)
     test_backlight: gpioleds {
         compatible = "gpio-leds";
         label = "Backlight LEDs";
         gpio_led_0 {
-            gpios = <&xiao_d 11>;
+            gpios = <&xiao_d 11 GPIO_ACTIVE_HIGH>;
             label = "Backlight LED 0"; 
         };
     };
