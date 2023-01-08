@@ -19,20 +19,36 @@
 
 / {
 
+    macros {
+        macro_bt_clr: macro_bt_clr {
+            label = "ZM_macro_bt_clr";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR>;
+        };
+        macro_bt_sel0: macro_bt_sel0 {
+            label = "ZM_macro_bt_sel0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>;
+        };
+    };
+
     behaviors {
-//        bt_ht: bluetooth_hold_tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "BLUETOOTH_HOLD_TAP";
-//            #binding-cells = <2>;
-//            tapping-term-ms = <200>;
-//            bindings = <&bt BT_CLR>, <&bt BT_SEL 0>;
-//        };
+       bt_ht: bluetooth_hold_tap {
+           compatible = "zmk,behavior-hold-tap";
+           label = "BLUETOOTH_HOLD_TAP";
+           #binding-cells = <2>;
+           tapping-term-ms = <200>;
+           bindings = <&bt BT_CLR>, <&macro_bt_sel0>;
+       };
         td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_CLR>;
+            bindings = <&bt_ht>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_CLR>;
+            // bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_CLR>;
         };
     };
 
@@ -56,20 +72,20 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        zmk,backlight = &test_backlight;
+        // zmk,backlight = &test_backlight;
     };
 
     // https://zmk.dev/docs/features/backlight
     // LED Pins: R=11, G=13, B=12
     // (https://github.com/mike1808/PIO_SEEED_Adafruit_nRF52_Arduino/blob/master/variants/Seeed_XIAO_nRF52840/variant.h)
-    test_backlight: gpioleds {
-        compatible = "gpio-leds";
-        label = "Backlight LEDs";
-        gpio_led_0 {
-            gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
-            label = "Backlight LED 0"; 
-        };
-    };
+    // test_backlight: gpioleds {
+    //     compatible = "gpio-leds";
+    //     label = "Backlight LEDs";
+    //     gpio_led_0 {
+    //         gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
+    //         label = "Backlight LED 0"; 
+    //     };
+    // };
 
 
     kscan0: kscan_0 {
