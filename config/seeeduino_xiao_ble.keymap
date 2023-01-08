@@ -20,7 +20,7 @@
             label = "BLUETOOTH_HOLD_TAP";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            bindings = <&bt BT_CLR>, <&bt BT_SEL 0>;
+            bindings = <&bt BT_CLR &bt BT_SEL 0>;
         };
         td_mt: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
@@ -64,7 +64,7 @@
             bindings = <
                 &ext_power EP_TOG
                 &mt LEFT_ARROW RIGHT_ARROW
-                &bt BT_CLR
+                &td_mt
             >;
         };
     };
