@@ -8,9 +8,11 @@
 #define LEFT_RIGHT_LAYER 0
 #define UP_DOWN_LAYER 1
 
-#define GPIO_PEDAL 2
-#define GPIO_LAYER 3
-#define GPIO_BLUETOOTH 4
+#define GPIO_PEDAL 10
+#define GPIO_BLUETOOTH 1
+#define GPIO_LAYER1 9
+#define GPIO_LAYER2 8
+#define GPIO_LAYER3 7
 
 &mt {
     tapping-term-ms = <500>;
@@ -75,8 +77,10 @@
 
         input-gpios = <
             &xiao_d GPIO_PEDAL (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
-            &xiao_d GPIO_LAYER (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
             &xiao_d GPIO_BLUETOOTH (GPIO_ACTIVE_LOW | GPIO_PULL_UP)
+            &xiao_d GPIO_LAYER1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+            &xiao_d GPIO_LAYER2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
+            &xiao_d GPIO_LAYER3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP) 
         >;
     };
 
@@ -88,6 +92,8 @@
             RC(0,0)
             RC(0,1)
             RC(0,2)
+            RC(0,3)
+            RC(0,4)
         >;
     };
 
@@ -96,15 +102,19 @@
         left_right_layer {
             bindings = <
                 &mt LEFT_ARROW RIGHT_ARROW
-                &mo UP_DOWN_LAYER
                 &td_mt
+                &mo UP_DOWN_LAYER
+                &mo UP_DOWN_LAYER
+                &mo UP_DOWN_LAYER
             >;
         };
         up_down_layer {
             bindings = <
                 &mt UP_ARROW DOWN_ARROW
-                &none
                 &td_mt
+                &none
+                &none
+                &none
             >;
         };
     };
