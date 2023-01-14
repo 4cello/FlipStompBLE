@@ -5,40 +5,47 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 
-#define LEFT_RIGHT_LAYER 0
-#define UP_DOWN_LAYER 1
+// Mode layer numbers
+#define LAYER_000 0
+#define LAYER_001 1
+#define LAYER_010 2
+#define LAYER_011 3
+#define LAYER_100 4
+#define LAYER_101 5
+#define LAYER_110 6
+#define LAYER_111 7
 
+// Pinout
 #define GPIO_PEDAL 10
 #define GPIO_BLUETOOTH 1
 #define GPIO_LAYER1 9
 #define GPIO_LAYER2 8
 #define GPIO_LAYER3 7
 
-#define L0_HOLD N0
-#define L0_TAP N0
-#define L1_HOLD N1
-#define L1_TAP N1
-#define L2_HOLD N2
-#define L2_TAP N2
-#define L3_HOLD N3
-#define L3_TAP N3
-#define L4_HOLD N4
-#define L4_TAP N4
-#define L5_HOLD N5
-#define L5_TAP N5
-#define L6_HOLD N6
-#define L6_TAP N6
-#define L7_HOLD N7
-#define L7_TAP N7
+// Key bindings for different modes
+#define L0_HOLD     LEFT_ARROW
+#define L0_TAP      RIGHT_ARROW
 
-#define LAYER_0 0
-#define LAYER_1 1
-#define LAYER_2 2
-#define LAYER_3 3
-#define LAYER_4 4
-#define LAYER_5 5
-#define LAYER_6 6
-#define LAYER_7 7
+#define L1_HOLD     UP_ARROW
+#define L1_TAP      DOWN_ARROW
+
+#define L2_HOLD     C_VOLUME_UP
+#define L2_TAP      C_VOLUME_DOWN
+
+#define L3_HOLD     C_AC_COPY
+#define L3_TAP      C_AC_PASTE
+
+#define L4_HOLD     C_AC_REDO
+#define L4_TAP      C_AC_UNDO
+
+#define L5_HOLD     C_PLAY_PAUSE
+#define L5_TAP      C_PAUSE
+
+#define L6_HOLD     C_BRIGHTNESS_INC
+#define L6_TAP      C_BRIGHTNESS_DEC
+
+#define L7_HOLD     N0
+#define L7_TAP      N1
 
 
 &mt {
@@ -70,7 +77,7 @@
            tapping-term-ms = <200>;
            bindings = <&macro_bt_clr &macro_bt_sel0>;
        };
-        td_mt: tap_dance_mod_tap {
+        bluetooth_tapdance: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
@@ -129,35 +136,35 @@
         layer_000 {
             bindings = <
                 &mt L0_HOLD L0_TAP
-                &td_mt
-                &mo LAYER_4
-                &mo LAYER_2
-                &mo LAYER_1
+                &bluetooth_tapdance
+                &mo LAYER_100
+                &mo LAYER_010
+                &mo LAYER_001
             >;
         };
         layer_001 {
             bindings = <
                 &mt L1_HOLD L1_TAP
-                &td_mt
-                &mo LAYER_5
-                &mo LAYER_3
+                &bluetooth_tapdance
+                &mo LAYER_101
+                &mo LAYER_011
                 &none
             >;
         };
         layer_010 {
             bindings = <
                 &mt L2_HOLD L2_TAP
-                &td_mt
-                &mo LAYER_6
+                &bluetooth_tapdance
+                &mo LAYER_110
                 &none
-                &mo LAYER_3
+                &mo LAYER_011
             >;
         };
         layer_011 {
             bindings = <
                 &mt L3_HOLD L3_TAP
-                &td_mt
-                &mo LAYER_7
+                &bluetooth_tapdance
+                &mo LAYER_111
                 &none
                 &none
             >;
@@ -165,34 +172,34 @@
         layer_100 {
             bindings = <
                 &mt L4_HOLD L4_TAP
-                &td_mt
+                &bluetooth_tapdance
                 &none
-                &mo LAYER_6
-                &mo LAYER_5
+                &mo LAYER_110
+                &mo LAYER_101
             >;
         };
         layer_101 {
             bindings = <
                 &mt L5_HOLD L5_TAP
-                &td_mt
+                &bluetooth_tapdance
                 &none
-                &mo LAYER_7
+                &mo LAYER_111
                 &none
             >;
         };
         layer_110 {
             bindings = <
                 &mt L6_HOLD L6_TAP
-                &td_mt
+                &bluetooth_tapdance
                 &none
                 &none
-                &mo LAYER_7
+                &mo LAYER_111
             >;
         };
         layer_111 {
             bindings = <
                 &mt L7_HOLD L7_TAP
-                &td_mt
+                &bluetooth_tapdance
                 &none
                 &none
                 &none
