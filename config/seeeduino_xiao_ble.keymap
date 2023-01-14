@@ -14,6 +14,15 @@
 #define GPIO_LAYER2 8
 #define GPIO_LAYER3 7
 
+#define LAYER_0 N0 N0
+#define LAYER_1 N1 N1
+#define LAYER_2 N2 N2
+#define LAYER_3 N3 N3
+#define LAYER_4 N4 N4
+#define LAYER_5 N5 N5
+#define LAYER_6 N6 N6
+#define LAYER_7 N7 N7
+
 &mt {
     tapping-term-ms = <500>;
 };
@@ -99,18 +108,72 @@
 
     keymap {
         compatible = "zmk,keymap";
-        left_right_layer {
+        layer_000 {
             bindings = <
-                &mt LEFT_ARROW RIGHT_ARROW
+                &mt LAYER_0
                 &td_mt
-                &mo UP_DOWN_LAYER
-                &mo UP_DOWN_LAYER
-                &mo UP_DOWN_LAYER
+                &mo layer_100
+                &mo layer_010
+                &mo layer_001
             >;
         };
-        up_down_layer {
+        layer_001 {
             bindings = <
-                &mt UP_ARROW DOWN_ARROW
+                &mt LAYER_1
+                &td_mt
+                &mo layer_101
+                &mo layer_011
+                &none
+            >;
+        };
+        layer_010 {
+            bindings = <
+                &mt LAYER_2
+                &td_mt
+                &mo layer_110
+                &none
+                &mo layer_011
+            >;
+        };
+        layer_011 {
+            bindings = <
+                &mt LAYER_3
+                &td_mt
+                &mo layer_111
+                &none
+                &none
+            >;
+        };
+        layer_100 {
+            bindings = <
+                &mt LAYER_4
+                &td_mt
+                &none
+                &mo layer_110
+                &mo layer_101
+            >;
+        };
+        layer_101 {
+            bindings = <
+                &mt LAYER_5
+                &td_mt
+                &none
+                &mo layer_111
+                &none
+            >;
+        };
+        layer_110 {
+            bindings = <
+                &mt LAYER_6
+                &td_mt
+                &none
+                &none
+                &mo layer_111
+            >;
+        };
+        layer_111 {
+            bindings = <
+                &mt LAYER_7
                 &td_mt
                 &none
                 &none
