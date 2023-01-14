@@ -17,7 +17,7 @@
 
 // Pinout
 #define GPIO_PEDAL 10
-#define GPIO_BLUETOOTH 1
+#define GPIO_BLUETOOTH 0
 #define GPIO_LAYER1 9
 #define GPIO_LAYER2 8
 #define GPIO_LAYER3 7
@@ -74,7 +74,7 @@
            compatible = "zmk,behavior-hold-tap";
            label = "BLUETOOTH_HOLD_TAP";
            #binding-cells = <2>;
-           tapping-term-ms = <200>;
+           tapping-term-ms = <2000>;
            bindings = <&macro_bt_clr &macro_bt_sel0>;
        };
         bluetooth_tapdance: tap_dance_mod_tap {
