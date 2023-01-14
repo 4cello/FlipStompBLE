@@ -14,14 +14,22 @@
 #define GPIO_LAYER2 8
 #define GPIO_LAYER3 7
 
-#define LAYER_0 N0 N0
-#define LAYER_1 N1 N1
-#define LAYER_2 N2 N2
-#define LAYER_3 N3 N3
-#define LAYER_4 N4 N4
-#define LAYER_5 N5 N5
-#define LAYER_6 N6 N6
-#define LAYER_7 N7 N7
+#define L0_HOLD N0
+#define L0_TAP N0
+#define L1_HOLD N1
+#define L1_TAP N1
+#define L2_HOLD N2
+#define L2_TAP N2
+#define L3_HOLD N3
+#define L3_TAP N3
+#define L4_HOLD N4
+#define L4_TAP N4
+#define L5_HOLD N5
+#define L5_TAP N5
+#define L6_HOLD N6
+#define L6_TAP N6
+#define L7_HOLD N7
+#define L7_TAP N7
 
 &mt {
     tapping-term-ms = <500>;
@@ -110,7 +118,7 @@
         compatible = "zmk,keymap";
         layer_000 {
             bindings = <
-                &mt LAYER_0
+                &mt L0_HOLD L0_TAP
                 &td_mt
                 &mo layer_100
                 &mo layer_010
@@ -119,7 +127,7 @@
         };
         layer_001 {
             bindings = <
-                &mt LAYER_1
+                &mt L1_HOLD L1_TAP
                 &td_mt
                 &mo layer_101
                 &mo layer_011
@@ -128,7 +136,7 @@
         };
         layer_010 {
             bindings = <
-                &mt LAYER_2
+                &mt L2_HOLD L2_TAP
                 &td_mt
                 &mo layer_110
                 &none
@@ -137,7 +145,7 @@
         };
         layer_011 {
             bindings = <
-                &mt LAYER_3
+                &mt L3_HOLD L3_TAP
                 &td_mt
                 &mo layer_111
                 &none
@@ -146,7 +154,7 @@
         };
         layer_100 {
             bindings = <
-                &mt LAYER_4
+                &mt L4_HOLD L4_TAP
                 &td_mt
                 &none
                 &mo layer_110
@@ -155,7 +163,7 @@
         };
         layer_101 {
             bindings = <
-                &mt LAYER_5
+                &mt L5_HOLD L5_TAP
                 &td_mt
                 &none
                 &mo layer_111
@@ -164,7 +172,7 @@
         };
         layer_110 {
             bindings = <
-                &mt LAYER_6
+                &mt L6_HOLD L6_TAP
                 &td_mt
                 &none
                 &none
@@ -173,7 +181,7 @@
         };
         layer_111 {
             bindings = <
-                &mt LAYER_7
+                &mt L7_HOLD L7_TAP
                 &td_mt
                 &none
                 &none
