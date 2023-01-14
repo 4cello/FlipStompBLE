@@ -31,6 +31,16 @@
 #define L7_HOLD N7
 #define L7_TAP N7
 
+#define LAYER_0 0
+#define LAYER_1 1
+#define LAYER_2 2
+#define LAYER_3 3
+#define LAYER_4 4
+#define LAYER_5 5
+#define LAYER_6 6
+#define LAYER_7 7
+
+
 &mt {
     tapping-term-ms = <500>;
 };
@@ -120,17 +130,17 @@
             bindings = <
                 &mt L0_HOLD L0_TAP
                 &td_mt
-                &mo layer_100
-                &mo layer_010
-                &mo layer_001
+                &mo LAYER_4
+                &mo LAYER_2
+                &mo LAYER_1
             >;
         };
         layer_001 {
             bindings = <
                 &mt L1_HOLD L1_TAP
                 &td_mt
-                &mo layer_101
-                &mo layer_011
+                &mo LAYER_5
+                &mo LAYER_3
                 &none
             >;
         };
@@ -138,16 +148,16 @@
             bindings = <
                 &mt L2_HOLD L2_TAP
                 &td_mt
-                &mo layer_110
+                &mo LAYER_6
                 &none
-                &mo layer_011
+                &mo LAYER_3
             >;
         };
         layer_011 {
             bindings = <
                 &mt L3_HOLD L3_TAP
                 &td_mt
-                &mo layer_111
+                &mo LAYER_7
                 &none
                 &none
             >;
@@ -157,8 +167,8 @@
                 &mt L4_HOLD L4_TAP
                 &td_mt
                 &none
-                &mo layer_110
-                &mo layer_101
+                &mo LAYER_6
+                &mo LAYER_5
             >;
         };
         layer_101 {
@@ -166,7 +176,7 @@
                 &mt L5_HOLD L5_TAP
                 &td_mt
                 &none
-                &mo layer_111
+                &mo LAYER_7
                 &none
             >;
         };
@@ -176,7 +186,7 @@
                 &td_mt
                 &none
                 &none
-                &mo layer_111
+                &mo LAYER_7
             >;
         };
         layer_111 {
