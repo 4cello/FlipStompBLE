@@ -40,5 +40,6 @@ bom/
 
 # Gerber export output
 out/
+gerber/
 
 # End of https://www.toptal.com/developers/gitignore/api/kicad
