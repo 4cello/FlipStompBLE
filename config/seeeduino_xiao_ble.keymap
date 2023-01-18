@@ -49,12 +49,13 @@
 
 
 &mt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <300>;
 };
 
 / {
 
     macros {
+        // Simple macros that call BT_CLR and BT_SEL 0 respectively, so they can be used in a hold-tap
         macro_bt_clr: macro_bt_clr {
             label = "ZM_macro_bt_clr";
             compatible = "zmk,behavior-macro";
@@ -70,19 +71,21 @@
     };
 
     behaviors {
-       bt_ht: bluetooth_hold_tap {
+        // bt_ht: Hold bluetooth button to clear profile, tap to select profile 0
+        bt_ht: bluetooth_hold_tap {
            compatible = "zmk,behavior-hold-tap";
            label = "BLUETOOTH_HOLD_TAP";
            #binding-cells = <2>;
            tapping-term-ms = <2000>;
            bindings = <&macro_bt_clr &macro_bt_sel0>;
-       };
+        };
+        // bluetooth_tapdance: number of taps = select profile. hold button = clear profile
         bluetooth_tapdance: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bt_ht 0 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>;
+            bindings = <&bt_ht 0 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>, <&bt BT_SEL 4>;
         };
     };
 
@@ -104,6 +107,8 @@
         >;
     };
 
+
+    // direct kscan needs a matrix transform, apparently. 
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         rows = <3>;
@@ -117,6 +122,10 @@
         >;
     };
 
+    // Using conditional layers to switch between different modes.
+    // Layer 001, 010, 100 are directly activated from layer 000 by "pressing" the button (/flipping the switch)
+    // if multiple of those layers are active, conditional layers activate the combination of those.
+    // Priorisation is handled by the ordering of layers (probably), so since 111 is last, it always takes precendent.
     conditional_layers {
         compatible = "zmk,conditional-layers";
         cond_011 {
@@ -137,6 +146,10 @@
         };
     };
 
+    // Key 1 = mod-tap for holding and tapping the pedal
+    // Key 2 = Bluetooth config (tap = select, hold = clear)
+    // Key 3-5 = Mode select
+    // Key 1 is redefined in each layer (= for each mode), but keys 2-5 are only defined in layer_000, transparent everywhere else.
     keymap {
         compatible = "zmk,keymap";
         layer_000 {
