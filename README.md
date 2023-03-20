@@ -1,2 +1,6 @@
 # FlipStompBLE
-## using ZMK
+
+## Firmware
+## PCB
+
+## Enclosure

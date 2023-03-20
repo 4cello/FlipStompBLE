@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "Seeeduino XIAO")(type "Legacy")(uri "C:/Users/jg/Downloads/Seeeduino XIAO KICAD/Seeeduino XIAO.lib")(options "")(descr ""))
+  (lib (name "cherry_led")(type "KiCad")(uri "${KIPRJMOD}/cherry_led.kicad_sym")(options "")(descr ""))
 )
