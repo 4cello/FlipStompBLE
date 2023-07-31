@@ -1203,8 +1203,8 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 80.01 146.05 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1dae53b3-dac4-44f9-bd0e-c8caabe3abc3)
-    (property "Reference" "SW_EN1" (id 0) (at 86.6308 146.05 0))
-    (property "Value" "SW_ENABLE" (id 1) (at 84.0939 146.05 0))
+    (property "Reference" "SW2" (id 0) (at 86.6308 146.05 0))
+    (property "Value" "PWR" (id 1) (at 84.0939 146.05 0))
     (property "Footprint" "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q" (id 2) (at 80.01 146.05 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1235,8 +1235,8 @@
   (symbol (lib_id "Switch:SW_Push") (at 63.5 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 38af1a5b-40ba-49ed-8086-d7b128177d98)
-    (property "Reference" "BTN_RESET1" (id 0) (at 63.5 31.4792 0))
-    (property "Value" "BTN_RESET" (id 1) (at 63.5 34.0161 0))
+    (property "Reference" "BTN2" (id 0) (at 63.5 31.4792 0))
+    (property "Value" "RESET" (id 1) (at 63.5 34.0161 0))
     (property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H7.3mm" (id 2) (at 63.5 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1250,7 +1250,7 @@
   (symbol (lib_id "Device:R") (at 48.26 151.13 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3b1dc44c-db64-47a9-afdd-0c59a9191aac)
-    (property "Reference" "R3" (id 0) (at 49.53 152.4 0)
+    (property "Reference" "R4" (id 0) (at 49.53 152.4 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "10k" (id 1) (at 49.53 149.86 0)
@@ -1269,7 +1269,7 @@
   (symbol (lib_id "Device:R") (at 44.45 144.78 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3b40bec6-88fb-47a7-acdd-0e7fc95b021c)
-    (property "Reference" "R2" (id 0) (at 44.45 139.7 90))
+    (property "Reference" "R5" (id 0) (at 44.45 139.7 90))
     (property "Value" "100" (id 1) (at 44.45 142.24 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 44.45 146.558 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -1284,8 +1284,8 @@
   (symbol (lib_id "Switch:SW_Push") (at 63.5 54.61 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 3b9882c8-9aa0-4b87-a78a-16d5db2117c4)
-    (property "Reference" "BTN_BT1" (id 0) (at 63.5 47.9892 0))
-    (property "Value" "BTN_BLUETOOTH" (id 1) (at 63.5 50.5261 0))
+    (property "Reference" "BTN1" (id 0) (at 63.5 47.9892 0))
+    (property "Value" "BT" (id 1) (at 63.5 50.5261 0))
     (property "Footprint" "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx39-2LFS" (id 2) (at 63.5 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1423,8 +1423,8 @@
   (symbol (lib_id "Switch:SW_Push") (at 62.23 109.22 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b39d2cf3-2d13-4a7a-8d39-e0f357e39fb5)
-    (property "Reference" "SW1" (id 0) (at 62.23 102.5992 0))
-    (property "Value" "SW_Push" (id 1) (at 62.23 105.1361 0))
+    (property "Reference" "SW1" (id 0) (at 62.23 101.6 0))
+    (property "Value" "PEDAL" (id 1) (at 62.23 104.14 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 62.23 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1438,7 +1438,7 @@
   (symbol (lib_id "Device:R") (at 191.77 71.12 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b7bb8517-00b5-4caf-8c18-eda7de5afdde)
-    (property "Reference" "B1" (id 0) (at 191.77 71.12 90))
+    (property "Reference" "R3" (id 0) (at 191.77 71.12 90))
     (property "Value" "R" (id 1) (at 191.77 68.9411 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 191.77 69.342 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -1453,7 +1453,7 @@
   (symbol (lib_id "Device:R") (at 191.77 66.04 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid bfd987b2-b471-4edd-9a20-44eb2e980ca7)
-    (property "Reference" "G1" (id 0) (at 191.77 66.04 90))
+    (property "Reference" "R2" (id 0) (at 191.77 66.04 90))
     (property "Value" "R" (id 1) (at 191.77 63.8611 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 191.77 64.262 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -1574,17 +1574,14 @@
     (path "/f9f6177d-17c7-40c7-8aab-eaf03b6dea45"
       (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
     )
-    (path "/b7bb8517-00b5-4caf-8c18-eda7de5afdde"
-      (reference "B1") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
     (path "/6eb4e5f0-1898-4a31-958e-2e5a03350318"
       (reference "BAT1") (unit 1) (value "Battery Connector") (footprint "Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal")
     )
     (path "/3b9882c8-9aa0-4b87-a78a-16d5db2117c4"
-      (reference "BTN_BT1") (unit 1) (value "BTN_BLUETOOTH") (footprint "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx39-2LFS")
+      (reference "BTN1") (unit 1) (value "BT") (footprint "Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx39-2LFS")
     )
     (path "/38af1a5b-40ba-49ed-8086-d7b128177d98"
-      (reference "BTN_RESET1") (unit 1) (value "BTN_RESET") (footprint "Button_Switch_THT:SW_PUSH_6mm_H7.3mm")
+      (reference "BTN2") (unit 1) (value "RESET") (footprint "Button_Switch_THT:SW_PUSH_6mm_H7.3mm")
     )
     (path "/e2980494-286b-4082-b45d-c732efc68e2d"
       (reference "D2") (unit 1) (value "LED_RKGB") (footprint "LED_THT:LED_D5.0mm-4_RGB_Wide_Pins")
@@ -1592,26 +1589,29 @@
     (path "/708b5770-fb3c-4322-9f3e-d2362796667c"
       (reference "DIP_MODE1") (unit 1) (value "SW_DIP_x03") (footprint "Button_Switch_THT:SW_DIP_SPSTx03_Slide_6.7x9.18mm_W7.62mm_P2.54mm_LowProfile")
     )
-    (path "/bfd987b2-b471-4edd-9a20-44eb2e980ca7"
-      (reference "G1") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
     (path "/6d7c23f0-27c3-4fa6-89cc-f79a540be70c"
       (reference "Q1") (unit 1) (value "BUK7880-55A") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/ed459d60-2755-4580-bbb0-62778a4d08b2"
       (reference "R1") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
-    (path "/3b40bec6-88fb-47a7-acdd-0e7fc95b021c"
-      (reference "R2") (unit 1) (value "100") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    (path "/bfd987b2-b471-4edd-9a20-44eb2e980ca7"
+      (reference "R2") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/b7bb8517-00b5-4caf-8c18-eda7de5afdde"
+      (reference "R3") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/3b1dc44c-db64-47a9-afdd-0c59a9191aac"
-      (reference "R3") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R4") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/3b40bec6-88fb-47a7-acdd-0e7fc95b021c"
+      (reference "R5") (unit 1) (value "100") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/b39d2cf3-2d13-4a7a-8d39-e0f357e39fb5"
-      (reference "SW1") (unit 1) (value "SW_Push") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
+      (reference "SW1") (unit 1) (value "PEDAL") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
     (path "/1dae53b3-dac4-44f9-bd0e-c8caabe3abc3"
-      (reference "SW_EN1") (unit 1) (value "SW_ENABLE") (footprint "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q")
+      (reference "SW2") (unit 1) (value "PWR") (footprint "Button_Switch_THT:SW_Slide_1P2T_CK_OS102011MS2Q")
     )
     (path "/1d6bc926-0438-4b17-a675-0536bdc82233"
       (reference "U1") (unit 1) (value "SeeeduinoXIAO") (footprint "footswitch-pcb:XIAO-nRF52840-Sense-14P-2.54-21X17.8MM")

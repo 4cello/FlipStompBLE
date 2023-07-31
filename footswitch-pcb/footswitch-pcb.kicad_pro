@@ -429,5 +429,8 @@
       ""
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "serialText": "WayWayWay",
+    "version": "1.1"
+  }
 }
